@@ -1,5 +1,5 @@
 const request = require('postman-request')
-const chalk = require('Chalk')
+//
 
 
 
@@ -11,13 +11,13 @@ const forecast = (latitude,Longitude,callback)=>{
     request({url,json:true},(error,{body}) => {
 
         if(error){
-            callback(chalk.red("Unable to connect to Weather Service",undefined))
+            callback("Unable to connect to Weather Service",undefined)
         } 
         else if (body.error){
-            callback(chalk.red(body.error.info),undefined)
+            callback(body.error.info,undefined)
         }
         else{
-            callback(undefined,chalk.green("The Description of weather is "+body.current.weather_descriptions[0] +". The Temperature today is: "+ body.current.temperature + " degress and it feels like : " + body.current.feelslike + " degress"))
+            callback(undefined,"The Description of weather is "+body.current.weather_descriptions[0] +". The Temperature today is: "+ body.current.temperature + " degress and it feels like : " + body.current.feelslike + " degress")
         }
 
 
