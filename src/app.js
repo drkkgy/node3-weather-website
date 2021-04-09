@@ -1,7 +1,7 @@
 const hbs = require('hbs')
 const path = require('path')
 const express = require('express')
-const chalk = require('chalk')
+//const chalk = require('chalk')
 const geocode = require('../utils/geocode')
 const forecast = require('../utils/forecast')
 
