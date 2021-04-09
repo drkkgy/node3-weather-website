@@ -16,7 +16,8 @@ const public_directory_path = path.join(__dirname,'../public')
 const views_Path = path.join(__dirname,'../templates/views')
 const partials_Path = path.join(__dirname,'../templates/partials')
 
-const port = 3000
+//const port = 3000 // While deploying 
+const port  = process.env.PORT || 3000  // Required for the deployed environment as port values keep changing
 const app = express()
 
 
