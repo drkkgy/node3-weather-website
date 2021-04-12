@@ -17,7 +17,8 @@ const forecast = (latitude,Longitude,callback)=>{
             callback(body.error.info,undefined)
         }
         else{
-            callback(undefined,"The Description of weather is "+body.current.weather_descriptions[0] +". The Temperature today is: "+ body.current.temperature + " degress and it feels like : " + body.current.feelslike + " degress")
+            callback(undefined,"The Description of weather is "+body.current.weather_descriptions[0] +". The Temperature today is: "+ body.current.temperature + " degress and it feels like : " + body.current.feelslike + " degress" + 
+            " Todays humidity is :" + body.current.humidity + " And the cloud cover is :" + body.current.cloudcover)
         }
 
 
